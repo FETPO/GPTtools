@@ -7,11 +7,12 @@ class Prompt:
     def __init__(self, template, **kwargs):
         self.template: str = template
         self.kwargs: dict = kwargs
+        self.template = self.__construct()
 
     def __str__(self) -> str:
         return self.template
 
-    def construct(self):
+    def __construct(self) -> str:
         """Construct the prompt"""
         # Look for the keys in the template from the kwargs
         for key in self.kwargs.items():
