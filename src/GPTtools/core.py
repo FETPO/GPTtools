@@ -1,3 +1,6 @@
+"""
+GPTtools.core
+"""
 import requests
 
 
